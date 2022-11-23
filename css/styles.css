@@ -19,6 +19,7 @@ html {
 }
 
 body {
+    margin: 20px;
     color: var(--color-body);
     font-family: Inter, Arial, Arial, Helvetica, sans-serif;
     font-size: 2.4rem;
@@ -197,6 +198,7 @@ a {
     background: var(--color-primary);
     color: #fff;
 }
+
 .btn--primary:hover {
     background: #3a8ffd;
 }
@@ -205,9 +207,11 @@ a {
     background-color: var(--color-secondary);
     color: #fff;
 }
+
 .btn--secondary:hover {
     background: #00c8eb;
 }
+
 .btn--accent {
     background: var(--color-accent);
     color: #fff;
@@ -221,11 +225,16 @@ a {
     color: var(--color-headings);
     border: 2px solid var(--color-headings);
 }
+
 .btn--outline:hover {
     background: var(--color-headings);
     color: #fff;
 }
 
+.btn--stretched {
+    padding-left: 6rem;
+    padding-right: 6rem;
+}
 .btn--block {
     width: 100%;
     display: inline-block;
@@ -468,5 +477,46 @@ a {
 
     .testimonial .quote {
         margin-left: 6rem;
+    }
+}
+
+/* Callouts */
+.callout {
+    padding: 4rem;
+    border-radius: 5px;
+}
+
+.callout--primary {
+    background: var(--color-primary);
+    color: #fff;
+}
+
+.callout__heading {
+    color: #fff;
+    margin-top: 0;
+    font-size: 3rem;
+}
+
+.callout .btn{
+    justify-self: center;
+    align-self: center;
+
+}
+
+.callout__content{
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .callout .grid--1x2 {
+        grid-template-columns: 1fr auto;
+    }
+    .callout__content{
+        text-align: left;
+    }
+
+    .callout .btn {
+        justify-self: start;
+        margin: 0 2rem;
     }
 }
