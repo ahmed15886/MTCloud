@@ -15,19 +15,30 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="callout callout--primary">
-      <div class="grid grid--1x2">
-        <div class="callout__content">
-          <h2 class="callout__heading">Ready to Get Started?</h2>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero rem
-            veniam labore molestias itaque ullam rerum maxime provident tempora
-            quia in recusandae reprehenderit dicta, reiciendis adipisci harum
-            iure beatae dolorem!
-          </p>
-        </div>
-        <a href="#" class="btn btn--secondary btn--stretched">Get Started</a>
+    <div class="collapsible">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading">Item 1</h2>
+        <svg class="icon collapsible__chevron">
+          <use xlink:href="images/sprite.svg#line"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta harum
+        voluptatem cum quam in ratione vitae recusandae sequi accusantium eum.
       </div>
     </div>
+    <div class="collapsible">
+      <header class="collapsible__header">
+        <h2 class="collapsible__heading">Item 1</h2>
+        <svg class="icon collapsible__chevron">
+          <use xlink:href="images/sprite.svg#line"></use>
+        </svg>
+      </header>
+      <div class="collapsible__content">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Soluta harum
+        voluptatem cum quam in ratione vitae recusandae sequi accusantium eum.
+      </div>
+    </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
