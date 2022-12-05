@@ -506,6 +506,10 @@ a {
     position: relative;
 }
 
+.quote__text {
+    text-align: left;
+}
+
 .testimonial__image > img {
     width: 100%;
 }
@@ -606,6 +610,7 @@ a {
   
 .block__header {
     text-align: center;
+    margin-bottom: 40rem;
 }
   
 .block__heading {
