@@ -15,11 +15,11 @@
 
 /* Typography */
 html {
+    /* 62.5% of 16px = 10px */
     font-size: 62.5%;
 }
 
 body {
-    margin: 20px;
     color: var(--color-body);
     font-family: Inter, Arial, Arial, Helvetica, sans-serif;
     font-size: 2.4rem;
@@ -36,6 +36,7 @@ h1 {
     
     font-size: 7rem;
 }
+
 h2 {
     font-size: 4rem;
 }
@@ -52,12 +53,15 @@ p {
     body {
         font-size: 1.8rem;
     }
+
     h1 {
         font-size: 8rem;
     }
+
     h2 {
         font-size: 4rem;
     }
+
     h3 {
         font-size: 2.4rem;
     }
@@ -108,8 +112,10 @@ a {
     background: var(--color-secondary);
     color: #fff;
 }
+
 .badge--small {
     font-size: 1.6rem;
+    padding: 0.5rem 1.5rem;
 }
 
 @media screen and (min-width: 1024px)  {
@@ -149,16 +155,6 @@ a {
 }
 
 /* Icons */
-.icon-container {
-    align-items: center;
-    background: #f3f9fa;
-    border-radius: 100%;
-    display: inline-flex;
-    height: 64px;
-    justify-content: center;
-    width: 64px;
-}
-
 .icon {
     width: 40px;
     height: 40px;
@@ -173,12 +169,22 @@ a {
     fill: var(--color-primary);
 }
 
-.icon-container--accent {
-    background: var(--color-accent);
-}
-
 .icon--white {
     fill: #fff;
+}
+
+.icon-container {
+    align-items: center;
+    background: #f3f9fa;
+    border-radius: 100%;
+    display: inline-flex;
+    height: 64px;
+    justify-content: center;
+    width: 64px;
+}
+
+.icon-container--accent {
+    background: var(--color-accent);
 }
 
 /* Buttons */
@@ -225,6 +231,7 @@ a {
     background: var(--color-accent);
     color: #fff;
 }
+
 .btn--accent:hover {
     background: #ec3000;
 }
@@ -244,6 +251,7 @@ a {
     padding-left: 6rem;
     padding-right: 6rem;
 }
+
 .btn--block {
     width: 100%;
     display: inline-block;
@@ -265,6 +273,7 @@ a {
     outline: 0;
     padding: 1.5rem 2rem;
 }
+
 ::placeholder {
     color: #cdcbd7;
 }
@@ -291,7 +300,6 @@ a {
 
 /* Cards */
 .card {
-    margin: 5rem;
     border-radius: 7px;
     box-shadow: 0 0 20px 10px #f3f3f3;
     overflow: hidden;
@@ -299,7 +307,6 @@ a {
 
 .card__header,
 .card__body {
-    border-radius: 7px;
     padding: 2rem 3rem;
 }
 
@@ -318,13 +325,19 @@ a {
     margin: 1rem;
 }
 
-@media screen and (min-width: 1024px) {
-    .card--container {
-        width: 35%;
-    }
+.card--primary .badge--primary {
+    background: #126de4;
+}
+
+.card--secondary .badge--secondary {
+    background: #02cdf1;
 }
 
 /* Plans */
+.plan {
+    transition: transform 0.2s ease-out;
+}
+
 .plan__name {
     color: #fff;
     margin: 0;
@@ -335,6 +348,7 @@ a {
 .plan__price {
     font-size: 6rem;
 }
+
 .plan__billing-cycle {
     font-size: 2.4rem;
     font-weight: 300;
@@ -352,9 +366,15 @@ a {
 .plan .list__item {
     margin-bottom: 2rem;
 }
+
+.plan--popular {
+    transform: scale(1.1);
+}
+
 .plan--popular .card__header {
     position: relative;
 }
+
 .plan--popular .card__header::before {
     content: url(/images/popular.svg);
     width: 40px;
@@ -362,6 +382,14 @@ a {
     position: absolute;
     top: -6px;
     right: 5%;
+}
+
+.plan:hover {
+    transform: scale(1.05);
+}
+  
+.plan--popular:hover {
+    transform: scale(1.15);
 }
 
 @media screen and (min-width: 1024px)  {
@@ -453,9 +481,15 @@ a {
     display: grid;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     .grid--1x2 {
-        grid-template-columns: repeat(2,1fr);
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .grid--1x3 {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
@@ -509,7 +543,6 @@ a {
 .callout .btn{
     justify-self: center;
     align-self: center;
-
 }
 
 .callout__content{
@@ -666,6 +699,7 @@ a {
 .hero {
     clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
 }
+
 .hero__tagline {
     font-size: 2rem;
     color: #b9c3cf;
@@ -702,12 +736,22 @@ a {
     font-size: 2rem;
     font-weight: 600;
     justify-items: center;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 @media screen and (min-width: 768px) {
     .block-domain__prices {
         grid-template-columns: repeat(auto-fit,minmax(10rem,1fr));
-        max-width: 700px;
-        margin: 0 auto;
     }
+}
+
+/* Plans Block */
+.block-plans .grid {
+    gap: 8rem 4rem;
+}
+
+.block-plans .card {
+    max-width: 500px;
+    margin: 0 auto;
 }
