@@ -78,7 +78,7 @@ a {
 
 .link-arrow {
     color:var(--color-accent);
-    font-size: 2rems;
+    font-size: 2rem;
     font-weight: bold;
     text-transform: uppercase;
 }
